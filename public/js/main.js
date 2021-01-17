@@ -15,7 +15,7 @@ const apiCall = (address) => {
     msg1.textContent = "Loading...";
     msg2.textContent = ""
 
-    fetch(`http://localhost:3000/weather?search=${address}`).then((response) => {
+    fetch(`/weather?search=${address}`).then((response) => {
   response.json().then((data) => {
     if (data.error) {
       msg1.textContent = data.error
