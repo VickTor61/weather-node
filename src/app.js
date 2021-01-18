@@ -6,21 +6,20 @@ const { GeocodeLocation, forecast } = require("./utils/api");
 const app = express();
 const port = process.env.PORT || 3000;
 
-
 //define paths for express configs
 const publicDirectoryPath = path.join(__dirname, "../public");
-const Viewspath = path.join(__dirname, "../templates/views");
+const viewsPath = path.join(__dirname, "../templates/views");
 const partialPath = path.join(__dirname, "../templates/partials");
 
 //Setup handlebars engine and views location
 app.set("view engine", "hbs");
-app.set("views", Viewspath);
+app.set("views", viewsPath);
 hbs.registerPartials(partialPath);
 
 //setup static directory to serve
 app.use(express.static(publicDirectoryPath));
 
-app.get("", (req, res) => {
+app.get("/", (req, res) => {
   res.render("index", {
     title: "Weather",
     content: "Use this app to know your weather",
@@ -29,7 +28,7 @@ app.get("", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.render("index", {
+  res.render("about", {
     title: " About page",
     content: "what you need to know about me",
     name: "victor",
@@ -37,7 +36,7 @@ app.get("/about", (req, res) => {
 });
 
 app.get("/help", (req, res) => {
-  res.render("index", {
+  res.render("help", {
     title: "Help page",
     content: "help texts",
     name: "victor",

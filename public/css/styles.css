@@ -3,7 +3,7 @@ body {
     font-size: 62.5%;
     font-family: Arial, Helvetica, sans-serif;
     margin:  0 auto;
-    padding-left: 1.6rem 0;
+    padding: 1.6rem 0;
     width: 50rem;
     color: #888888;
 
@@ -22,13 +22,11 @@ header> h1 {
 }
  a {
     outline: none;
-    color: inherit;
-    text-transform: uppercase;
-    padding: 1rem 1rem 0 0;
+    color: #1327dd8a;
     text-decoration: none;
 }
 .main__container a:hover {
-    color: orangered;
+    color: rgb(55, 0, 255);
     cursor: pointer;
 }
 
@@ -43,9 +41,12 @@ header {
     font-size: 1.2rem;
     padding: 2rem 0;
 }
-
+header a {
+    padding: 1rem 1rem 0 0;
+    text-transform: uppercase;
+}
 p {
-    color: #000000;
+    color: #9e7575;
     padding: 1rem 0;
 }
 form {
@@ -62,6 +63,7 @@ input {
 
 } input:focus {
     outline: none;
+    border: 5px solid #888888;
     
 }
 input::placeholder {
@@ -79,4 +81,7 @@ button:hover {
     color: #000000;
     background-color: #888888;
     cursor: pointer;
+}
+.portrait {
+    width: 20rem;
 }
